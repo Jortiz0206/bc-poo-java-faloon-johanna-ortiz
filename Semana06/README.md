@@ -1,4 +1,4 @@
-# README.md - Semana 06: Abstracción e Interfaces
+# Semana 06: Abstracción e Interfaces
 
 ## Objetivo
 Implementar los pilares de diseño avanzado: **Clases Abstractas** e **Interfaces**. Esto mejora la estructura del código para hacerlo más extensible y modular (Principios SOLID).
@@ -15,4 +15,5 @@ Implementar los pilares de diseño avanzado: **Clases Abstractas** e **Interface
 * La clase `FacialTreatment.java` demuestra la **implementación múltiple**, ya que cumple ambos contratos (`Billable` y `Schedulable`), y puede ser procesada por cualquier módulo del sistema (Facturación o Agenda) sin depender de su clase concreta.
 
 ##  Nota de Entrega
+
 Debido a las restricciones del entorno, todos los archivos `.java` se mantienen juntos en esta carpeta, sin líneas `package` ni subcarpetas internas. La justificación de la arquitectura modular se encuentra en el documento de análisis.
