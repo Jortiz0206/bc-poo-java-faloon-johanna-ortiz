@@ -1,4 +1,4 @@
-# README.md - Semana 04: Herencia y Polimorfismo
+# Semana 04: Herencia y Polimorfismo
 
 ## Objetivo
 Modelar la jerarquía de los servicios del Centro de Belleza, aplicando la **Herencia** para reutilizar código y el **Polimorfismo** para gestionar dinámicamente los precios.
@@ -13,4 +13,5 @@ Modelar la jerarquía de los servicios del Centro de Belleza, aplicando la **Her
 
 ## ✅ Conceptos Demostrados
 * **Herencia:** Uso de `extends` y `super()` para inicializar el constructor padre.
+
 * **Polimorfismo:** El `Main.java` demuestra que un objeto de tipo `Service` (la referencia) puede contener objetos de tipo `FacialTreatment` o `ManicurePedicure` (el objeto real), y el método `calculateFinalPrice()` funciona correctamente para cada uno.
