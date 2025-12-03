@@ -1,4 +1,4 @@
-#Semana 03: Herencia y Polimorfismo
+# Semana 03: Herencia y Polimorfismo
 
 ## Objetivo
 Aplicar el principio de **Herencia** para crear una jerarquía de clases eficiente y demostrar el **Polimorfismo** dentro del sistema.
@@ -16,3 +16,4 @@ La clase **LoyaltyClient.java** extiende a **Client**, creando una jerarquía mu
 * Introduce lógica específica (puntos de lealtad).
 
 * Demuestra la **Sobreescritura de Métodos** (`@Override getInfo()`), un pilar del Polimorfismo, adaptando el comportamiento de la clase padre.
+
