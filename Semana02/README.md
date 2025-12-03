@@ -1,4 +1,4 @@
-# 📄 README.md - Semana 02: Relaciones y Colecciones
+# Semana 02: Relaciones y Colecciones
 
 ## Objetivo
 Expandir el sistema "Belleza Total" introduciendo nuevas clases, creando relaciones de objetos y utilizando la colección ArrayList para la gestión de datos.
@@ -15,4 +15,5 @@ La clase **BeautyCenter** actúa como el gestor del negocio, utilizando un **Arr
 Se añadieron **Product.java** (para inventario) y **CustomerRecord.java** (para historial del cliente) para enriquecer el modelo del dominio con lógica de negocio específica.
 
 ## ✅ Estado del Código
+
 El código está consolidado en la carpeta `src/Semana02/` y es funcional.
