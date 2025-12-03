@@ -1,4 +1,4 @@
-# README.md - Semana 07: Manejo Profesional de Excepciones y Paquetes
+# Semana 07: Manejo Profesional de Excepciones y Paquetes
 
 ## Objetivo
 Implementar la estructura de paquetes profesionales (`com.belleza.modelo`, etc.) y hacer el sistema robusto mediante el uso de excepciones personalizadas y bloques `try-catch-finally`.
@@ -15,4 +15,5 @@ Implementar la estructura de paquetes profesionales (`com.belleza.modelo`, etc.)
 
 ### 3. Manejo de Errores
 * El constructor de `Service` utiliza la cláusula **`throws`** para delegar el manejo del error.
+
 * El archivo `Main.java` demuestra el uso de bloques **`try-catch`** para la recuperación del sistema y la demostración de **`finally`** para el cierre de recursos.
