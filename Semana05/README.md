@@ -1,4 +1,4 @@
-# README.md - Semana 05: Polimorfismo Avanzado (Overloading/Overriding)
+# Semana 05: Polimorfismo Avanzado (Overloading/Overriding)
 
 ## Objetivo
 Aplicar los conceptos de **Sobrecarga (Overloading)** y **Sobrescritura (Overriding)** para optimizar la jerarquía de servicios, demostrando el polimorfismo en la gestión de costos.
@@ -15,4 +15,5 @@ Aplicar los conceptos de **Sobrecarga (Overloading)** y **Sobrescritura (Overrid
 * **Funcionalidad:** Se utilizó **`@Override`** para reemplazar la lógica de cálculo de precio de la clase padre, permitiendo a cada clase hija aplicar sus propios impuestos o recargos.
 
 ### 3. Polimorfismo Dinámico
+
 * **Demostración:** La clase `SystemProcessor.java` demuestra que puede procesar diferentes tipos de servicios (`FacialTreatment` vs `ManicurePedicure`) usando una única referencia de tipo `Service` (el Padre).
