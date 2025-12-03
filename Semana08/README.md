@@ -1,4 +1,4 @@
-# README.md - Semana 08: Persistencia de Datos (File I/O)
+# Semana 08: Persistencia de Datos (File I/O)
 
 ## Objetivo
 Implementar la funcionalidad de **persistencia de datos** en el sistema, asegurando que la colección principal de citas (`ArrayList`) no se pierda al cerrar el programa, utilizando el manejo de archivos (I/O).
@@ -21,4 +21,5 @@ El código está listo para compilar y guardar/cargar datos en formato de texto.
 ## Comando de Ejecución
 Desde la carpeta raíz del paquete (`src/com/belleza`):
 ```bash
+
 java com.belleza.Main
