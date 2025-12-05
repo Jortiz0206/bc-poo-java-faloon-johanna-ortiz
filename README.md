@@ -1,15 +1,32 @@
-# 📚 Portafolio de Logros POO (Semanas 01-09)
+# Portafolio de Logros POO (Semanas 01-09)
 
 ## Sistema de Gestión: Centro de Estética y Belleza "Belleza Total"
 
-| Campo | Valor |
-|-------|-------|
-| **Nombre** | Faloon Johanna Ortiz Londoño |
-| **Ficha** | 3228970A |
-| **Dominio** | Centro de Estética y Belleza |
-| **Estructura** | Paquetes Profesionales (`com.belleza/...`) |
+## Información del Estudiante
+
+| Campo     | Valor                                           |
+|-----------|-------------------------------------------------|
+| **Nombre** | Faloon Johanna Ortiz Londoño                   |
+| **Registro** | 3228970A                                     |
+| **Dominio** | Centro de Estética y Belleza "Belleza Total" |
+| **Estado** | Proyecto Final Integrado (Semanas 01–09)       |
 
 ***
+
+## 📝 Descripción General del Sistema
+
+Este proyecto implementa un sistema completo para la gestión de citas y servicios en un centro de estética.  
+Se diseñó siguiendo principios sólidos de **Programación Orientada a Objetos (POO)**, integrando:
+
+- Arquitectura modular basada en paquetes
+- Manejo avanzado de colecciones
+- Patrones de diseño profesionales
+- Escalabilidad y robustez del código
+
+El resultado es una plataforma que centraliza y organiza toda la operación de un centro de estética moderno.
+
+---
+
 
 ## 🧬 Avance Técnico: Integración por Semanas
 
@@ -40,13 +57,13 @@ El código demuestra la **integración total** de los principios de Programació
 
 ### Requisitos
 * El código fuente se encuentra en la estructura de paquetes: `src/com/belleza/[módulo]`.
-* Java JDK 11 o superior.
+* Java JDK 11 .
 
 ### Compilación (Desde la Terminal en la carpeta `proyecto-final/src`)
 ```bash
 javac com/belleza/*/*.java com/belleza/Main.java
 
-# 🧩 Diagrama UML — Sistema de Gestión "Belleza Total"
+# Diagrama UML — Sistema de Gestión "Belleza Total"
 
 A continuación se presenta el modelo UML del sistema, organizado en tablas para facilitar la lectura y documentar correctamente la arquitectura POO del proyecto.
 
