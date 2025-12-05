@@ -53,7 +53,7 @@ El código demuestra la **integración total** de los principios de Programació
 
 ***
 
-## 🚀 Guía de Ejecución
+## Guía de Ejecución
 
 ### Requisitos
 * El código fuente se encuentra en la estructura de paquetes: `src/com/belleza/[módulo]`.
@@ -63,7 +63,7 @@ El código demuestra la **integración total** de los principios de Programació
 ```bash
 javac com/belleza/*/*.java com/belleza/Main.java
 
-# Diagrama UML — Sistema de Gestión "Belleza Total"
+## Diagrama UML — Sistema de Gestión "Belleza Total"
 
 A continuación se presenta el modelo UML del sistema, organizado en tablas para facilitar la lectura y documentar correctamente la arquitectura POO del proyecto.
 
