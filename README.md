@@ -46,82 +46,124 @@ El código demuestra la **integración total** de los principios de Programació
 ```bash
 javac com/belleza/*/*.java com/belleza/Main.java
 
-## Diagrama UML del Sistema
+# 🧩 Diagrama UML — Sistema de Gestión "Belleza Total"
 
-```mermaid
-classDiagram
-    %% ====== ENTIDADES ======
-    class Client {
-        -String name
-        -String email
-        -String phone
-        +getName()
-        +getEmail()
-        +getPhone()
-    }
+A continuación se presenta el modelo UML del sistema, organizado en tablas para facilitar la lectura y documentar correctamente la arquitectura POO del proyecto.
 
-    class Appointment {
-        -Client client
-        -Service service
-        -String date
-        -String time
-        +getClient()
-        +getService()
-        +getDate()
-        +getTime()
-    }
+---
 
-    %% ====== SERVICIOS ======
-    class Service {
-        <<abstract>>
-        -String name
-        -double basePrice
-        +calculateFinalPrice()
-        +getName()
-        +getBasePrice()
-    }
+## Clase: `Client`
+| Atributo | Tipo | Descripción |
+|---------|------|-------------|
+| id | int | Identificador único del cliente |
+| name | String | Nombre completo |
+| email | String | Correo (validación de formato) |
+| phone | String | Teléfono de contacto |
 
-    class FacialTreatment {
-        +calculateFinalPrice()
-    }
+| Método | Descripción |
+|--------|-------------|
+| getInfo() | Retorna información general |
+| validateEmail() | Valida el formato del correo |
 
-    class ManicurePedicure {
-        +calculateFinalPrice()
-    }
+---
 
-    Service <|-- FacialTreatment
-    Service <|-- ManicurePedicure
+## Clase: `Esthetician`
+| Atributo | Tipo | Descripción |
+|---------|------|-------------|
+| id | int | ID del esteticista |
+| name | String | Nombre |
+| specialty | String | Especialidad (Uñas, Faciales, etc.) |
 
-    %% ====== INTERFACES ======
-    class Billable {
-        <<interface>>
-        +calculateFinalPrice()
-    }
+| Método | Descripción |
+|--------|-------------|
+| getProfile() | Muestra el perfil del profesional |
 
-    class Schedulable {
-        <<interface>>
-        +schedule()
-    }
+---
 
-    Service ..|> Billable
-    Appointment ..|> Schedulable
+## Clase Abstracta: `Service`
+| Atributo | Tipo | Descripción |
+|---------|------|-------------|
+| id | int | ID del servicio |
+| name | String | Nombre |
+| basePrice | double | Precio base |
+| durationMinutes | int | Duración del servicio |
 
-    %% ====== LOGICA DEL SISTEMA ======
-    class BeautyCenter {
-        <<Singleton>>
-        -static BeautyCenter instance
-        -List~Service~ services
-        -List~Appointment~ appointments
-        +getInstance()
-        +addService()
-        +addAppointment()
-        +findService()
-    }
+| Método | Descripción |
+|--------|-------------|
+| calculateFinalPrice() | Método abstracto (cada servicio lo implementa distinto) |
+| getSummary() | Retorna datos del servicio |
 
-    class ServiceFactory {
-        +createService(type, name, price)
-    }
+---
 
-    BeautyCenter --> Service : gestiona
-    BeautyCenter --> Appointment : administra
-    ServiceFactory --> Service : crea
+## Clase: `FacialTreatment` (extends Service)
+| Atributo | Tipo | Descripción |
+|---------|------|-------------|
+| skinType | String | Tipo de piel recomendado |
+
+| Método | Descripción |
+|--------|-------------|
+| calculateFinalPrice() | Calcula precio con recargos especiales |
+
+---
+
+## Clase: `ManicurePedicure` (extends Service)
+| Atributo | Tipo | Descripción |
+|---------|------|-------------|
+| includeNailArt | boolean | Si incluye decoración |
+
+| Método | Descripción |
+|--------|-------------|
+| calculateFinalPrice() | Calcula extras según decoración |
+
+---
+
+## Clase: `Appointment`
+| Atributo | Tipo | Descripción |
+|---------|------|-------------|
+| id | int | Identificador |
+| client | Client | Cliente asociado |
+| esthetician | Esthetician | Profesional asignado |
+| service | Service | Servicio polimórfico |
+| date | LocalDate | Fecha |
+| time | LocalTime | Hora |
+
+| Método | Descripción |
+|--------|-------------|
+| schedule() | Programa la cita |
+| cancel() | Cancela la cita |
+
+---
+
+## Clase Singleton: `BeautyCenter`
+| Responsabilidad | Descripción |
+|-----------------|-------------|
+| Gestión central | Maneja clientes, servicios y citas |
+| Estado único | Solo existe una instancia |
+
+| Método | Descripción |
+|--------|-------------|
+| getInstance() | Retorna la instancia única |
+| addClient() | Agrega clientes |
+| addAppointment() | Registra citas |
+| findService() | Búsqueda polimórfica de servicios |
+
+---
+
+## Clase Factory: `ServiceFactory`
+| Método | Descripción |
+|--------|-------------|
+| createService(type) | Crea instancias polimórficas (Facial, Manicure, etc.) |
+
+---
+
+## 🔗 Relaciones UML del Sistema
+| Clase A | Relación | Clase B | Descripción |
+|---------|----------|---------|-------------|
+| Client | 1..* | Appointment | Un cliente puede tener varias citas |
+| Esthetician | 1..* | Appointment | Un esteticista atiende varias citas |
+| Service | 1..* | Appointment | Un servicio puede aparecer en varias citas |
+| Service | Herencia | FacialTreatment, ManicurePedicure | Especialización |
+| BeautyCenter | Usa | Client, Service, Appointment | Gestor principal |
+| ServiceFactory | Crea | Service | Creación polimórfica |
+
+---
