@@ -25,7 +25,7 @@ Se diseñó siguiendo principios sólidos de **Programación Orientada a Objetos
 
 El resultado es una plataforma que centraliza y organiza toda la operación de un centro de estética moderno.
 
----
+***
 
 
 ## 🧬 Avance Técnico: Integración por Semanas
@@ -63,17 +63,17 @@ El código demuestra la **integración total** de los principios de Programació
 ```bash
 * javac com/belleza/*/*.java com/belleza/Main.java
 
-
+***
 
 ### Diagrama UML — Sistema de Gestión "Belleza Total"
 
 A continuación se presenta el modelo UML del sistema, organizado en tablas para facilitar la lectura y documentar correctamente la arquitectura POO del proyecto.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 ## Clase: `Client`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | ** Atributo ** | Tipo | Descripción |
 |---------|------|-------------|
@@ -87,11 +87,11 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | getInfo() | Retorna información general |
 | validateEmail() | Valida el formato del correo |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 ## Clase: `Esthetician`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
@@ -103,11 +103,11 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 |--------|-------------|
 | getProfile() | Muestra el perfil del profesional |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 ## Clase Abstracta: `Service`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
@@ -121,12 +121,12 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | calculateFinalPrice() | Método abstracto (cada servicio lo implementa distinto) |
 | getSummary() | Retorna datos del servicio |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 
 ## Clase: `FacialTreatment` (extends Service)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
@@ -136,12 +136,12 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 |--------|-------------|
 | calculateFinalPrice() | Calcula precio con recargos especiales |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 
 ## Clase: `ManicurePedicure` (extends Service)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
@@ -151,12 +151,12 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 |--------|-------------|
 | calculateFinalPrice() | Calcula extras según decoración |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 
 ## Clase: `Appointment`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
@@ -172,12 +172,11 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | schedule() | Programa la cita |
 | cancel() | Cancela la cita |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+***
 
 ## Clase Singleton: `BeautyCenter`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Responsabilidad | Descripción |
 |-----------------|-------------|
@@ -191,23 +190,23 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | addAppointment() | Registra citas |
 | findService() | Búsqueda polimórfica de servicios |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 
 ## Clase Factory: `ServiceFactory`
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 | Método | Descripción |
 |--------|-------------|
 | createService(type) | Crea instancias polimórficas (Facial, Manicure, etc.) |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
 
 ## Relaciones UML del Sistema
 
-
+***
 | Clase A | Relación | Clase B | Descripción |
 |---------|----------|---------|-------------|
 | Client | 1..* | Appointment | Un cliente puede tener varias citas |
@@ -217,5 +216,5 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | BeautyCenter | Usa | Client, Service, Appointment | Gestor principal |
 | ServiceFactory | Crea | Service | Creación polimórfica |
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+***
 
