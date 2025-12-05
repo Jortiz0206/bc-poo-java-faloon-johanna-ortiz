@@ -169,7 +169,7 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | Esthetician | 1..* | Appointment | Un esteticista atiende varias citas |
 | Service | 1..* | Appointment | Un servicio puede aparecer en varias citas |
 | Service | Herencia | FacialTreatment, ManicurePedicure | Especialización |
-| BeautyCenter | Usa | Client, Service, Appointment | Gestor principal |
+| BeautyCenter | Dependencia | Client, Service, Appointment | Gestor principal |
 | ServiceFactory | Crea | Service | Creación polimórfica |
 
 ---
