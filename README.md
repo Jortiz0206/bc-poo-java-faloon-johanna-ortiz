@@ -13,7 +13,7 @@
 
 ***
 
-## 📝 Descripción General del Sistema
+## Descripción General del Sistema
 
 Este proyecto implementa un sistema completo para la gestión de citas y servicios en un centro de estética.  
 Se diseñó siguiendo principios sólidos de **Programación Orientada a Objetos (POO)**, integrando:
@@ -28,7 +28,7 @@ El resultado es una plataforma que centraliza y organiza toda la operación de u
 ***
 
 
-## 🧬 Avance Técnico: Integración por Semanas
+## Avance Técnico: Integración por Semanas
 
 El código demuestra la **integración total** de los principios de Programación Orientada a Objetos y las técnicas avanzadas de arquitectura de software.
 
@@ -52,30 +52,14 @@ El código demuestra la **integración total** de los principios de Programació
 | **Patrón Factory** | **Creación Polimórfica** | **`ServiceFactory.java`** (Centraliza la lógica de creación de servicios). |
 
 ***
-
-## Guía de Ejecución
-
-### Requisitos
-* El código fuente se encuentra en la estructura de paquetes: `src/com/belleza/[módulo]`.
-* Java JDK 11 .
-
-### Compilación (Desde la Terminal en la carpeta `proyecto-final/src`)
-```bash
-* javac com/belleza/*/*.java com/belleza/Main.java
-
-***
-
-### Diagrama UML — Sistema de Gestión "Belleza Total"
+# Diagrama UML — Sistema de Gestión "Belleza Total"
 
 A continuación se presenta el modelo UML del sistema, organizado en tablas para facilitar la lectura y documentar correctamente la arquitectura POO del proyecto.
 
-***
+---
 
 ## Clase: `Client`
-
-***
-
-| ** Atributo ** | Tipo | Descripción |
+| Atributo | Tipo | Descripción |
 |---------|------|-------------|
 | id | int | Identificador único del cliente |
 | name | String | Nombre completo |
@@ -87,12 +71,9 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | getInfo() | Retorna información general |
 | validateEmail() | Valida el formato del correo |
 
-***
+---
 
 ## Clase: `Esthetician`
-
-***
-
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
 | id | int | ID del esteticista |
@@ -103,12 +84,9 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 |--------|-------------|
 | getProfile() | Muestra el perfil del profesional |
 
-***
+---
 
 ## Clase Abstracta: `Service`
-
-***
-
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
 | id | int | ID del servicio |
@@ -121,13 +99,9 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | calculateFinalPrice() | Método abstracto (cada servicio lo implementa distinto) |
 | getSummary() | Retorna datos del servicio |
 
-***
-
+---
 
 ## Clase: `FacialTreatment` (extends Service)
-
-***
-
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
 | skinType | String | Tipo de piel recomendado |
@@ -136,13 +110,9 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 |--------|-------------|
 | calculateFinalPrice() | Calcula precio con recargos especiales |
 
-***
-
+---
 
 ## Clase: `ManicurePedicure` (extends Service)
-
-***
-
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
 | includeNailArt | boolean | Si incluye decoración |
@@ -151,13 +121,9 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 |--------|-------------|
 | calculateFinalPrice() | Calcula extras según decoración |
 
-***
-
+---
 
 ## Clase: `Appointment`
-
-***
-
 | Atributo | Tipo | Descripción |
 |---------|------|-------------|
 | id | int | Identificador |
@@ -172,12 +138,9 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | schedule() | Programa la cita |
 | cancel() | Cancela la cita |
 
-***
+---
 
 ## Clase Singleton: `BeautyCenter`
-
-***
-
 | Responsabilidad | Descripción |
 |-----------------|-------------|
 | Gestión central | Maneja clientes, servicios y citas |
@@ -190,23 +153,16 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | addAppointment() | Registra citas |
 | findService() | Búsqueda polimórfica de servicios |
 
-***
-
+---
 
 ## Clase Factory: `ServiceFactory`
-
-***
-
 | Método | Descripción |
 |--------|-------------|
 | createService(type) | Crea instancias polimórficas (Facial, Manicure, etc.) |
 
-***
+---
 
-
-## Relaciones UML del Sistema
-
-***
+## 🔗 Relaciones UML del Sistema
 | Clase A | Relación | Clase B | Descripción |
 |---------|----------|---------|-------------|
 | Client | 1..* | Appointment | Un cliente puede tener varias citas |
@@ -216,5 +172,16 @@ A continuación se presenta el modelo UML del sistema, organizado en tablas para
 | BeautyCenter | Usa | Client, Service, Appointment | Gestor principal |
 | ServiceFactory | Crea | Service | Creación polimórfica |
 
-***
+---
+
+## Guía de Ejecución
+
+### Requisitos
+* El código fuente se encuentra en la estructura de paquetes: `src/com/belleza/[módulo]`.
+* Java JDK 11 .
+
+### Compilación (Desde la Terminal en la carpeta `proyecto-final/src`)
+```bash
+* javac com/belleza/*/*.java com/belleza/Main.javDiagrama UML — Sistema de Gestión “Belleza Total”
+
 
