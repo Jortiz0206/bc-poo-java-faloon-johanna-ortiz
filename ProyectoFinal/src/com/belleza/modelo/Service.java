@@ -8,7 +8,7 @@ public class Service {
     private double price;
     private int durationMinutes; 
 
-    // Constructor que lanza la excepción al validar datos (EJERCICIO 2)
+
     public Service(String serviceCode, String name, double price, int durationMinutes) 
         throws ServicioInvalidoException // <<-- Declara que lanza un error
     {
@@ -25,8 +25,7 @@ public class Service {
         this.price = price;
         this.durationMinutes = durationMinutes;
     }
-    
-    // ... resto de getters y métodos (debes mover tus getters aquí) ...
     public String getName() { return name; }
     public double getPrice() { return price; }
+
 }
