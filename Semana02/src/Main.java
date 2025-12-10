@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("===== PRUEBA SEMANA 02: RELACIONES Y ARRAYS =====");
         
-        // 1. Crear objetos base (S01)
+        // 1. Crear objetos base 
         Esthetician sofia = new Esthetician(101, "Sofia Rodriguez", "Facial");
         Client cliente1 = new Client(501, "Andrea Gomez", "3001234567"); 
         Service servicioFacial = new Service("SER-001", "Limpieza Facial", 80000.0, 60); 
