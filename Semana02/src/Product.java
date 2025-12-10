@@ -11,7 +11,7 @@ public class Product {
         this.stockQuantity = stockQuantity;
     }
 
-    // Método de Negocio: Verifica si necesita ser reordenado
+  
     public boolean needsReorder() {
         return this.stockQuantity < 5; // Reordenar si hay menos de 5 unidades
     }
@@ -19,4 +19,5 @@ public class Product {
     // Getters
     public String getName() { return name; }
     public int getStockQuantity() { return stockQuantity; }
+
 }
