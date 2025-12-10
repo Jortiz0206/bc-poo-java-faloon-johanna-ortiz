@@ -10,7 +10,7 @@ public class FacialTreatment extends ServiceElement implements Billable, Schedul
         this.durationMinutes = durationMinutes;
     }
 
-    // Implementación de Billable
+    
     @Override
     public double getBaseCost() { return this.basePrice; }
     @Override
@@ -33,3 +33,4 @@ public class FacialTreatment extends ServiceElement implements Billable, Schedul
     }
 
 }
+
