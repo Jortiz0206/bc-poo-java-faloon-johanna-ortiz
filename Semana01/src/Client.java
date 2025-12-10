@@ -3,7 +3,7 @@ public class Client {
     private String name;
     private String phoneNumber;
     
-    // CONSTRUCTOR: 3 PARAMETROS (int, String, String)
+  
     public Client(int clientId, String name, String phoneNumber) {
         this.clientId = clientId;
         this.name = name;
@@ -16,4 +16,5 @@ public class Client {
     }
     
     public String getName() { return name; } 
+
 }
