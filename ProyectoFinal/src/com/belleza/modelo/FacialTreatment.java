@@ -4,7 +4,6 @@ public class FacialTreatment extends ServiceElement implements Billable, Schedul
     private int durationMinutes;
     private static final double TAX_RATE = 0.19; 
     
-    // El constructor debe ser ajustado para reflejar que FacialTreatment ya no extiende Service (S04)
     public FacialTreatment(String name, String code, double basePrice, int durationMinutes) {
         super(name, code, "Facial"); // Llama al constructor de ServiceElement (Clase Abstracta)
         this.basePrice = basePrice;
@@ -32,4 +31,5 @@ public class FacialTreatment extends ServiceElement implements Billable, Schedul
     public String getRoleDescription() {
         return "Tratamiento Facial - Duracion: " + this.durationMinutes + " min";
     }
+
 }
